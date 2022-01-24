@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  overflow: hidden;
+
+  nav {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #eb393c;
+    ul {
+      font-size: 2em;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-direction: row;
+    }
+    li {
+      margin: 0 1rem;
+      justify-content: center;
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      //   padding-top: 10px;
+      padding-bottom: 20px;
+    }
+    a {
+      position: relative;
+      text-decoration: none;
+      color: white;
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      transform: scale(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+    }
+    a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  section#home {
+    background: url(https://wallpaperaccess.com/full/449903.jpg) no-repeat
+      center center/cover;
+  }
+  section#ap {
+    background: url(https://images.unsplash.com/photo-1641002487920-0c3d5ca4573e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1689&q=80)
+      no-repeat center center/cover;
+    div {
+      background: white;
+      padding: 20px;
+      border-radius: 3em;
+      a {
+        text-decoration: none;
+        padding-left: 10px;
+        font-size: 30px;
+      }
+    }
+  }
+  section#simulations {
+    background: url(https://images.unsplash.com/photo-1619356815455-8094bc3f4a6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2128&q=80)
+      no-repeat center center/cover;
+  }
+  section#contact {
+    background: url(https://images.unsplash.com/photo-1636116461481-4c3ec444c9f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2066&q=80)
+      no-repeat center center/cover;
+  }
+  section#about {
+    background: url(https://images.unsplash.com/photo-1637494124766-2222ede3402b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2128&q=80)
+      no-repeat center center/cover;
+  }
+  section#history {
+    background: url(https://images.unsplash.com/photo-1637336659714-50c42464957a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80)
+      no-repeat center center/cover;
+  }
+}
